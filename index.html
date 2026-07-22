@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jair Lagos - Portfolio</title>
+  <style>
+  :root {
+  --navy: #1f3864;
+--accent: #2e75b6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
+color: #222;
+}
+header {
+  background: var(--navy);
+color: white;
+padding: 60px 20px;
+text-align: center;
+}
+header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+header p { font-size: 1.1rem; opacity: 0.9; }
+nav {
+  display: flex;
+justify-content: center;
+gap: 24px;
+background: #f0f4f8;
+padding: 14px;
+}
+nav a {
+  color: var(--navy);
+text-decoration: none;
+font-weight: bold;
+}
+section {
+  max-width: 800px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+h2 {
+  color: var(--navy);
+border-bottom: 3px solid var(--accent);
+padding-bottom: 8px;
+margin-bottom: 20px;
+}
+.card {
+  background: #f8f9fb;
+  border-radius: 8px;
+padding: 20px;
+margin-bottom: 16px;
+}
+.skills span {
+  display: inline-block;
+background: var(--accent);
+color: white;
+padding: 6px 12px;
+border-radius: 16px;
+margin: 4px;
+font-size: 0.9rem;
+}
+footer {
+  text-align: center;
+padding: 20px;
+color: #666;
+}
+#contact-form input, #contact-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 12px;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+#contact-form button {
+background: var(--accent);
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+cursor: pointer;
+}
+#form-status { margin-top: 10px; font-weight: bold; }
+</style>
+  </head>
+  <body>
+  <header>
+  <h1>Jair Andres Lagos Pereira</h1>
+  <p>Systems Engineering Student | Bilingual Technical Support | Web Developer</p>
+  </header>
+  <nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+  <h2>About Me</h2>
+  <p>Systems Engineering student at Universidad Industrial de Santander, graduating in 2026. More than a year of international work experience in the United States, combining leadership, customer service and technical support with a growing web development skill set.</p>
+  </section>
+  <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+  <span>HTML5</span>
+  <span>CSS3</span>
+  <span>JavaScript</span>
+  <span>Git</span>
+  <span>Java</span>
+  <span>Python</span>
+  <span>Networking</span>
+  <span>Technical Support</span>
+  </div>
+  </section>
+  <section id="experience">
+  <h2>Experience Highlights</h2>
+  <div class="card">
+  <strong>Technical Support Agent - Atento / Movistar Spain</strong>
+  <p>Bilingual remote technical support with 90%+ satisfaction scores.</p>
+  </div>
+  <div class="card">
+  <strong>Assistant Manager - KFC (United States)</strong>
+  <p>Led teams of up to 15 people and managed cash operations with 100% accuracy.</p>
+  </div>
+  </section>
+  <section id="contact">
+  <h2>Contact</h2>
+  <form id="contact-form">
+  <input type="text" placeholder="Your name" required>
+  <input type="email" placeholder="Your email" required>
+  <textarea rows="4" placeholder="Message"></textarea>
+  <button type="submit">Send</button>
+  </form>
+  <p id="form-status"></p>
+  </section>
+  <footer>
+  <p>Built with HTML5, CSS3 and vanilla JavaScript.</p>
+</footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+e.preventDefault();
+document.getElementById('form-status').textContent = 'Thanks! This is a demo form (no backend connected).';
+});
+</script>
+  </body>
+  </html>
