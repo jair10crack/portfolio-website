@@ -29,6 +29,7 @@ justify-content: center;
 gap: 24px;
 background: #f0f4f8;
 padding: 14px;
+flex-wrap: wrap;
 }
 nav a {
   color: var(--navy);
@@ -52,6 +53,22 @@ margin-bottom: 20px;
 padding: 20px;
 margin-bottom: 16px;
 }
+.project-card {
+  background: #f8f9fb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--accent);
+}
+.project-card h3 { color: var(--navy); margin-bottom: 8px; }
+.project-card p { margin-bottom: 10px; }
+.project-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 16px;
+}
+.project-links a:hover { text-decoration: underline; }
 .skills span {
   display: inline-block;
 background: var(--accent);
@@ -87,33 +104,68 @@ cursor: pointer;
   <body>
   <header>
   <h1>Jair Andres Lagos Pereira</h1>
-  <p>Systems Engineering Student | Bilingual Technical Support | Web Developer</p>
+  <p>Backend &amp; AI Automation Developer | Systems Engineering Student @ UIS</p>
   </header>
   <nav>
   <a href="#about">About</a>
+  <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
   <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
   </nav>
   <section id="about">
   <h2>About Me</h2>
-  <p>Systems Engineering student at Universidad Industrial de Santander, graduating in 2026. More than a year of international work experience in the United States, combining leadership, customer service and technical support with a growing web development skill set.</p>
+  <p>Systems Engineering student at Universidad Industrial de Santander (UIS), graduating 2027, focused on backend development and AI automation. I build things that actually ship: production-style REST APIs with authentication and automated tests, and AI chatbots that businesses use for real customer service. Before development, I spent time in bilingual (Spanish/English) technical support and leadership roles, which shapes how I build: I design for the end user, not just the code.</p>
+  </section>
+  <section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+  <h3>ReservaFacil API</h3>
+  <p>Production-style REST API for small business reservations. JWT authentication, full CRUD, and an automated test suite. Python, FastAPI, SQLModel.</p>
+  <div class="project-links">
+  <a href="https://github.com/jair10crack/reservafacil-api">GitHub</a>
+  </div>
+  </div>
+  <div class="project-card">
+  <h3>SupportKit</h3>
+  <p>Dependency-free Python toolkit for support and helpdesk teams: ticket priority classification, business-hours SLA tracking, and CSAT analysis.</p>
+  <div class="project-links">
+  <a href="https://github.com/jair10crack/supportkit">GitHub</a>
+  </div>
+  </div>
+  <div class="project-card">
+  <h3>SupportKit.js</h3>
+  <p>Zero-dependency TypeScript companion to SupportKit, bringing the same ticket-priority and SLA-tracking logic to JavaScript/Node projects.</p>
+  <div class="project-links">
+  <a href="https://github.com/jair10crack/supportkit-js">GitHub</a>
+  </div>
+  </div>
+  <div class="project-card">
+  <h3>AI Chatbot Demos</h3>
+  <p>Conversational AI assistants built for small businesses, handling customer questions, bookings, and support around the clock.</p>
+  </div>
   </section>
   <section id="skills">
   <h2>Skills</h2>
   <div class="skills">
+  <span>Python</span>
+  <span>FastAPI</span>
+  <span>REST APIs</span>
+  <span>JWT Auth</span>
+  <span>SQL</span>
+  <span>JavaScript</span>
+  <span>TypeScript</span>
+  <span>Git</span>
   <span>HTML5</span>
   <span>CSS3</span>
-  <span>JavaScript</span>
-  <span>Git</span>
-  <span>Java</span>
-  <span>Python</span>
-  <span>Networking</span>
-  <span>Technical Support</span>
   </div>
   </section>
   <section id="experience">
   <h2>Experience Highlights</h2>
+  <div class="card">
+  <strong>Administrative Assistant - Universidad Industrial de Santander</strong>
+  <p>Administrative support for institutional programs, including CV evaluation under the UIS-MEN agreement.</p>
+  </div>
   <div class="card">
   <strong>Technical Support Agent - Atento / Movistar Spain</strong>
   <p>Bilingual remote technical support with 90%+ satisfaction scores.</p>
